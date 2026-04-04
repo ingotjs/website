@@ -1,9 +1,14 @@
 export function CastTrustBar() {
   return (
-    <section className="trust">
-      <p className="trust-label">Built with</p>
-      <div className="trust-logos" style={{ maxWidth: 960, margin: "0 auto" }}>
-        <a href="https://tanstack.com/start" target="_blank" rel="noopener">
+    <section className="pt-0 px-6 pb-4 text-center">
+      <p className="text-xs uppercase tracking-[0.1em] text-text-dim mb-4">Built with</p>
+      <div className="flex items-center justify-center gap-y-3 gap-x-10 flex-wrap max-w-[960px] mx-auto">
+        <a
+          href="https://tanstack.com/start"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <img
             src="https://tanstack.com/images/logos/logo-color-100.png"
             width="20"
@@ -13,7 +18,12 @@ export function CastTrustBar() {
           />
           TanStack Start
         </a>
-        <a href="https://vite.dev/plus/" target="_blank" rel="noopener">
+        <a
+          href="https://vite.dev/plus/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <svg viewBox="0 0 36 20" fill="none" aria-hidden="true" style={{ height: 16 }}>
             <path
               fill="#6254fe"
@@ -26,7 +36,12 @@ export function CastTrustBar() {
           </svg>
           Vite+
         </a>
-        <a href="https://workers.cloudflare.com/" target="_blank" rel="noopener">
+        <a
+          href="https://workers.cloudflare.com/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <svg viewBox="0 -70 256 256" aria-hidden="true">
             <g transform="translate(0, -1)">
               <path
@@ -45,17 +60,46 @@ export function CastTrustBar() {
           </svg>
           Cloudflare
         </a>
-        <a href="https://orpc.dev/" target="_blank" rel="noopener">
+        <a
+          href="https://orpc.dev/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <img src="https://orpc.dev/logo.webp" width="20" height="20" alt="" aria-hidden="true" />
           oRPC
         </a>
-        <a href="https://better-auth.com/" target="_blank" rel="noopener">
+        <a
+          href="https://orm.drizzle.team/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
+          <svg viewBox="0 0 70 55" fill="#C5F74F" aria-hidden="true">
+            <rect width="5.254" height="22.283" rx="2.627" transform="matrix(0.873 0.488 -0.497 0.868 16.079 30.329)" />
+            <rect width="5.254" height="22.283" rx="2.627" transform="matrix(0.873 0.488 -0.497 0.868 34.33 19)" />
+            <rect width="5.254" height="22.283" rx="2.627" transform="matrix(0.873 0.488 -0.497 0.868 62.413 19)" />
+            <rect width="5.254" height="22.283" rx="2.627" transform="matrix(0.873 0.488 -0.497 0.868 44.156 30.329)" />
+          </svg>
+          Drizzle
+        </a>
+        <a
+          href="https://better-auth.com/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <svg viewBox="0 0 20 15" fill="currentColor" aria-hidden="true">
             <path fillRule="evenodd" d="m0 0h5v5h5v5H5v5H0V5ZM15 10V5H10V0H20V15H10v-5z" clipRule="evenodd" />
           </svg>
           Better Auth
         </a>
-        <a href="https://ui.shadcn.com/" target="_blank" rel="noopener">
+        <a
+          href="https://ui.shadcn.com/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <svg viewBox="0 0 256 256" fill="none" aria-hidden="true">
             <line
               x1="208"
@@ -80,13 +124,23 @@ export function CastTrustBar() {
           </svg>
           shadcn/ui
         </a>
-        <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">
+        <a
+          href="https://www.typescriptlang.org/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <svg viewBox="0 0 24 24" fill="#3178C6" aria-hidden="true">
             <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z" />
           </svg>
           TypeScript
         </a>
-        <a href="https://bun.sh/" target="_blank" rel="noopener">
+        <a
+          href="https://bun.sh/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <svg viewBox="0 0 80 70" fill="none" aria-hidden="true">
             <path
               d="M73 35.7C73 50.91 57.33 63.24 38 63.24C18.67 63.24 3 50.91 3 35.7C3 26.27 9 17.94 18.22 13C27.44 8.06 33.18 3 38 3C42.82 3 46.94 7.13 57.78 13C67 17.94 73 26.27 73 35.7Z"
@@ -119,16 +173,12 @@ export function CastTrustBar() {
           </svg>
           Bun
         </a>
-        <a href="https://orm.drizzle.team/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 70 55" fill="#C5F74F" aria-hidden="true">
-            <rect width="5.254" height="22.283" rx="2.627" transform="matrix(0.873 0.488 -0.497 0.868 16.079 30.329)" />
-            <rect width="5.254" height="22.283" rx="2.627" transform="matrix(0.873 0.488 -0.497 0.868 34.33 19)" />
-            <rect width="5.254" height="22.283" rx="2.627" transform="matrix(0.873 0.488 -0.497 0.868 62.413 19)" />
-            <rect width="5.254" height="22.283" rx="2.627" transform="matrix(0.873 0.488 -0.497 0.868 44.156 30.329)" />
-          </svg>
-          Drizzle
-        </a>
-        <a href="https://resend.com/" target="_blank" rel="noopener">
+        <a
+          href="https://resend.com/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <svg viewBox="0 0 1800 1800" aria-hidden="true">
             <path
               d="M1000.46 450C1174.77 450 1278.43 553.669 1278.43 691.282C1278.43 828.896 1174.77 932.563 1000.46 932.563H912.382L1350 1350H1040.82L707.794 1033.48C683.944 1011.47 672.936 985.781 672.935 963.765C672.935 932.572 694.959 905.049 737.161 893.122L908.712 847.244C973.85 829.812 1018.81 779.353 1018.81 713.298C1018.8 632.567 952.745 585.78 871.095 585.78H450V450H1000.46Z"
@@ -137,7 +187,12 @@ export function CastTrustBar() {
           </svg>
           Resend
         </a>
-        <a href="https://playwright.dev/" target="_blank" rel="noopener">
+        <a
+          href="https://playwright.dev/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <svg viewBox="0 0 400 400" fill="none" aria-hidden="true">
             <path
               d="M161.661 262.296V239.863L99.332 257.537C99.332 257.537 103.938 230.777 136.444 221.556C146.302 218.762 154.713 218.781 161.661 220.123V128.11H192.869C189.471 117.61 186.184 109.526 183.423 103.909C178.856 94.612 174.174 100.775 163.545 109.665C156.059 115.919 137.139 129.261 108.668 136.933C80.197 144.61 57.179 142.574 47.575 140.911C33.96 138.562 26.839 135.572 27.505 145.928C28.085 155.062 30.261 169.224 35.245 187.928C46.027 228.433 81.663 306.481 149.01 288.342C166.602 283.602 179.019 274.233 187.626 262.291H161.661ZM61.085 188.484L108.946 175.876C108.946 175.876 107.551 194.288 89.609 199.018C71.661 203.743 61.085 188.484 61.085 188.484Z"
@@ -150,7 +205,12 @@ export function CastTrustBar() {
           </svg>
           Playwright
         </a>
-        <a href="https://posthog.com/" target="_blank" rel="noopener">
+        <a
+          href="https://posthog.com/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <svg viewBox="0 0 300 300" aria-hidden="true">
             <path
               fill="#fff"
@@ -164,7 +224,12 @@ export function CastTrustBar() {
           </svg>
           PostHog
         </a>
-        <a href="https://lingui.dev/" target="_blank" rel="noopener">
+        <a
+          href="https://lingui.dev/"
+          target="_blank"
+          rel="noopener"
+          className="flex items-center gap-2 text-sm font-semibold text-text-dim brightness-[0.7] transition-[color,filter] duration-200 py-2.5 hover:text-text hover:brightness-100 [&_svg]:h-5 [&_svg]:w-auto [&_img]:h-5 [&_img]:w-auto"
+        >
           <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
             <path
               fillRule="evenodd"

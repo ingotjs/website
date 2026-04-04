@@ -2,18 +2,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { pkgConfig, pmCommands } from "../../lib/pkg-config";
 import type { PkgName, PmName } from "../../lib/pkg-config";
-import { CastDx } from "./cast-dx";
-import { CastFeatures } from "./cast-features";
-import { CastHero } from "./cast-hero";
-import { CastMore } from "./cast-more";
-import { CastQuickstart } from "./cast-quickstart";
-import { CastShowcase } from "./cast-showcase";
-import { CastTrustBar } from "./cast-trust-bar";
-import { ProspectFeatures } from "./prospect-features";
-import { ProspectHero } from "./prospect-hero";
-import { ProspectQuickstart } from "./prospect-quickstart";
-import { ProspectShowcase } from "./prospect-showcase";
-import { ProspectTrustBar } from "./prospect-trust-bar";
+import { CastPage } from "./cast/cast-page";
+import { ProspectPage } from "./prospect/prospect-page";
 
 export function LandingPage() {
   const [activePkg, setActivePkg] = useState<PkgName>("cast");
@@ -106,25 +96,25 @@ export function LandingPage() {
 
   return (
     <>
-      <a href="#main" className="skip-link">
+      <a href="#main" className="absolute -top-full left-4 z-[200] px-5 py-3 bg-accent text-bg font-bold text-sm rounded-b-lg transition-[top] duration-150 focus:top-0">
         Skip to content
       </a>
 
       {/* Nav */}
       <header>
-        <nav>
-          <div className="nav-inner">
-            <a href="/" className="nav-brand">
-              <img src="/logo.svg" alt="ingot" height="28" />
+        <nav className="fixed top-0 left-0 right-0 z-100 bg-bg border-b border-border">
+          <div className="max-w-[1120px] mx-auto px-6 h-16 flex items-center justify-between gap-4">
+            <a href="/" className="flex items-center gap-2.5 font-bold text-[1.3rem] tracking-tight min-h-11 shrink-0">
+              <img src="/logo.svg" alt="ingot" className="h-7" />
             </a>
-            <div className="nav-links">
+            <div className="flex items-center gap-1">
               <a
                 id="nav-npm"
                 ref={navNpmRef}
                 href="https://www.npmjs.com/package/@ingot/cast"
                 target="_blank"
                 rel="noopener"
-                className="nav-link"
+                className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg text-sm text-text-muted transition-all duration-150 min-h-11 hover:text-text hover:bg-white/6 [&_svg]:w-[18px] [&_svg]:h-[18px] [&_svg]:fill-current"
                 aria-label="npm"
               >
                 <svg viewBox="0 0 16 16" aria-hidden="true">
@@ -138,7 +128,7 @@ export function LandingPage() {
                 href="https://github.com/ingotjs/cast"
                 target="_blank"
                 rel="noopener"
-                className="nav-link"
+                className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg text-sm text-text-muted transition-all duration-150 min-h-11 hover:text-text hover:bg-white/6 [&_svg]:w-[18px] [&_svg]:h-[18px] [&_svg]:fill-current"
                 aria-label="GitHub"
               >
                 <svg viewBox="0 0 16 16" aria-hidden="true">
@@ -152,11 +142,11 @@ export function LandingPage() {
       </header>
 
       {/* Package tab bar */}
-      <div className="tab-bar">
-        <div className="tab-bar-inner" role="tablist" aria-label="Package" onKeyDown={handleTabKeyDown}>
+      <div className="tab-bar fixed top-16 left-0 right-0 z-99 bg-bg-subtle border-b border-border">
+        <div className="max-w-[1120px] mx-auto px-6 flex items-end gap-1.5 pt-2.5" role="tablist" aria-label="Package" onKeyDown={handleTabKeyDown}>
           <button
             role="tab"
-            className="tab-btn tab-btn--cast"
+            className="tab-btn tab-btn--cast appearance-none font-sans text-left cursor-pointer relative px-6 py-4 rounded-t-[10px] border border-transparent border-b-0 bg-transparent text-text-dim transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] min-w-[220px] hover:text-text-muted hover:bg-white/3 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-[-2px]"
             data-pkg="cast"
             aria-selected={activePkg === "cast"}
             aria-controls="page-cast"
@@ -165,15 +155,15 @@ export function LandingPage() {
               switchPkg("cast");
             }}
           >
-            <div className="tab-btn-top">
-              <span className="tab-btn-name">@ingot/cast</span>
-              <span className="tab-badge tab-badge--cast">New</span>
+            <div className="flex items-center gap-2.5 mb-1">
+              <span className="tab-btn-name text-[0.9375rem] font-bold font-mono tracking-tight">@ingot/cast</span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[0.5625rem] font-bold uppercase tracking-wide bg-[rgba(239,68,68,0.12)] text-cast-light border border-[rgba(239,68,68,0.2)]">New</span>
             </div>
-            <p className="tab-btn-desc">Full-stack TypeScript starter with AI-first DX</p>
+            <p className="tab-btn-desc text-[0.8125rem] leading-[1.4]">Full-stack TypeScript starter with AI-first DX</p>
           </button>
           <button
             role="tab"
-            className="tab-btn tab-btn--prospect"
+            className="tab-btn tab-btn--prospect appearance-none font-sans text-left cursor-pointer relative px-6 py-4 rounded-t-[10px] border border-transparent border-b-0 bg-transparent text-text-dim transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] min-w-[220px] hover:text-text-muted hover:bg-white/3 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-[-2px]"
             data-pkg="prospect"
             aria-selected={activePkg === "prospect"}
             aria-controls="page-prospect"
@@ -182,11 +172,11 @@ export function LandingPage() {
               switchPkg("prospect");
             }}
           >
-            <div className="tab-btn-top">
-              <span className="tab-btn-name">@ingot/prospect</span>
-              <span className="tab-badge tab-badge--prospect">WIP</span>
+            <div className="flex items-center gap-2.5 mb-1">
+              <span className="tab-btn-name text-[0.9375rem] font-bold font-mono tracking-tight">@ingot/prospect</span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[0.5625rem] font-bold uppercase tracking-wide bg-[rgba(34,197,94,0.12)] text-prospect-light border border-[rgba(34,197,94,0.2)]">WIP</span>
             </div>
-            <p className="tab-btn-desc">E2E coverage framework for route-based apps</p>
+            <p className="tab-btn-desc text-[0.8125rem] leading-[1.4]">E2E coverage framework for route-based apps</p>
           </button>
         </div>
       </div>
@@ -194,43 +184,27 @@ export function LandingPage() {
       <main id="main" key={activePkg}>
         {/* CAST */}
         <div className="pkg-page" id="page-cast" style={{ position: "relative" }} hidden={activePkg !== "cast"}>
-          <div className="hero-bg-cast">
-            <img src="bg-cast.webp" alt="" />
+          <div className="hero-bg-overlay absolute top-[110px] left-0 right-0 h-[900px] z-0 pointer-events-none overflow-hidden">
+            <img src="bg-cast.webp" alt="" className="w-full h-full object-cover object-top opacity-12" />
           </div>
-          <CastHero />
-          <CastTrustBar />
-          <CastFeatures />
-          <CastDx />
-          <CastMore />
-          <CastShowcase />
-          <CastQuickstart />
+          <CastPage />
         </div>
 
         {/* PROSPECT */}
         <div className="pkg-page" id="page-prospect" style={{ position: "relative" }} hidden={activePkg !== "prospect"}>
-          <div className="hero-bg-cast">
-            <img src="bg-prospect.webp" alt="" />
+          <div className="hero-bg-overlay absolute top-[110px] left-0 right-0 h-[900px] z-0 pointer-events-none overflow-hidden">
+            <img src="bg-prospect.webp" alt="" className="w-full h-full object-cover object-top opacity-12" />
           </div>
-          <ProspectHero
-            activePm={activePm}
-            onPmSwitch={setActivePm}
-            pmBin={pm.bin}
-            pmArgs={pm.args}
-            pmFullCmd={pmFullCmd}
-          />
-          <ProspectTrustBar />
-          <ProspectFeatures />
-          <ProspectShowcase />
-          <ProspectQuickstart activePm={activePm} onPmSwitch={setActivePm} pmBin={pm.bin} pmArgs={pm.args} />
+          <ProspectPage activePm={activePm} onPmSwitch={setActivePm} pmBin={pm.bin} pmArgs={pm.args} pmFullCmd={pmFullCmd} />
         </div>
       </main>
 
       {/* Footer */}
-      <footer>
-        <div className="footer-inner">
-          <p className="footer-copy">
-            made with <span className="heart">&#9829;</span> by{" "}
-            <a href="https://github.com/ftzi" target="_blank" rel="noopener" className="footer-author">
+      <footer className="py-12 px-6 text-center">
+        <div className="max-w-[1120px] mx-auto flex flex-col items-center gap-6">
+          <p className="text-[0.8125rem] text-text-dim">
+            made with <span className="text-cast">&#9829;</span> by{" "}
+            <a href="https://github.com/ftzi" target="_blank" rel="noopener" className="text-text-muted underline underline-offset-2">
               ftzi
             </a>
           </p>

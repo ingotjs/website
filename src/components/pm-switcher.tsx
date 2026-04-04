@@ -23,12 +23,12 @@ export function PmTabs({ active, onSwitch }: { active: PmName; onSwitch: (pm: Pm
   );
 
   return (
-    <div className="pm-tabs" role="tablist" aria-label="Package manager" onKeyDown={handleKeyDown}>
+    <div className="flex justify-start border-b border-border w-full" role="tablist" aria-label="Package manager" onKeyDown={handleKeyDown}>
       {pmNames.map((pm) => (
         <button
           key={pm}
           role="tab"
-          className="pm-tab"
+          className="pm-tab appearance-none border-none bg-transparent px-3.5 py-2 font-mono text-xs text-text-dim cursor-pointer border-b-2 border-transparent -mb-px transition-[color,border-color] duration-150 hover:text-text-muted"
           data-pm={pm}
           aria-selected={pm === active}
           tabIndex={pm === active ? 0 : -1}
