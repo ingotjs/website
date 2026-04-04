@@ -11,30 +11,21 @@ export function CastDx() {
             <div className="dx-cmd">
               <span className="dx-prompt">$</span> bun dev
             </div>
-            <p>Installs dependencies, applies database migrations, starts the dev server. One command, zero setup.</p>
+            <p>Installs dependencies, applies database migrations, starts the dev server.</p>
           </div>
           <div className="dx-card animate-on-scroll">
             <div className="dx-cmd">
               <span className="dx-prompt">$</span> bun ok
             </div>
-            <p>
-              Type checks, lints, formats, and runs all tests in one shot. If it passes, your code is clean. Run it
-              before every commit — or let the pre-commit hook do it for you.
-            </p>
+            <p>Type checks, lints, formats, and runs unit tests.</p>
           </div>
           <div className="dx-card animate-on-scroll">
             <div className="dx-cmd">
-              <span className="dx-prompt">$</span> git push
-            </div>
-            <p>CI takes over — runs checks, E2E tests, applies migrations, and deploys to the edge. Push and forget.</p>
-          </div>
-          <div className="dx-card animate-on-scroll">
-            <div className="dx-cmd">
-              <span className="dx-prompt">$</span> git commit
+              <span className="dx-prompt">$</span> bun ok:full
             </div>
             <p>
-              Pre-commit hooks run <code>bun ok</code> + format staged files automatically. Broken code never reaches
-              the repo.
+              Everything in <code>bun ok</code> plus E2E tests and dead code detection. Runs as pre-commit hook and in
+              CI before deploying.
             </p>
           </div>
         </div>
