@@ -24,9 +24,9 @@ export function CastDx() {
           </div>
           <div className="dx-card animate-on-scroll">
             <div className="dx-cmd">
-              <span className="dx-prompt">$</span> bun deploy
+              <span className="dx-prompt">$</span> git push
             </div>
-            <p>Applies database migrations and deploys to the edge. CI runs this automatically on push to main.</p>
+            <p>CI takes over — runs checks, E2E tests, applies migrations, and deploys to the edge. Push and forget.</p>
           </div>
           <div className="dx-card animate-on-scroll">
             <div className="dx-cmd">
