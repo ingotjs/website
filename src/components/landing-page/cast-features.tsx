@@ -28,7 +28,7 @@ export function CastFeatures() {
             <h3>AI-First Architecture</h3>
             <p>
               Comprehensive CLAUDE.md instructions, dozens of Claude Code skills, and strict code standards that
-              eliminate ambiguity. AI writes better code here than in most hand-rolled projects.
+              enforce quality and safety. AI writes better code here than in most hand-rolled projects.
             </p>
           </div>
           <div className="feature animate-on-scroll">
@@ -49,8 +49,8 @@ export function CastFeatures() {
             </div>
             <h3>Production-Ready</h3>
             <p>
-              Auth, API, database, email, i18n, observability, and CI/CD — all wired up and working together. Not a
-              skeleton — a foundation you can ship on.
+              Auth, API, database, email, observability, and CI/CD — all wired up and working together. Not a skeleton
+              — a foundation you can ship on.
             </p>
           </div>
           <div className="feature animate-on-scroll">
@@ -95,7 +95,7 @@ export function CastFeatures() {
             </div>
             <h3>i18n From Day One</h3>
             <p>
-              Every user-facing string flows through
+              Every user-facing string flows through{" "}
               <a href="https://lingui.dev/" target="_blank" rel="noopener">
                 Lingui
               </a>{" "}
