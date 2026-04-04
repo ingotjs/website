@@ -19,7 +19,7 @@ export function ProspectHero({ activePm, onPmSwitch, pmBin, pmArgs, pmFullCmd }:
         companion.
       </h1>
       <p className="hero-desc">
-        Coverage mapping, flakiness tracking, test artifacts, and a dev overlay — all in one package. Your AI agent
+        Coverage mapping, test artifacts, and a dev overlay — all in one package. Your AI agent
         scans every route, applies <code>data-testid</code>, and builds the coverage file. You see everything in an
         overlay without leaving your app.
       </p>

@@ -51,30 +51,8 @@ export function ProspectFeatures() {
             </div>
             <h3>Dev Overlay</h3>
             <p>
-              See coverage, flakiness, and test videos directly in your app. Green for covered, red for gaps, amber for
-              flaky. Click any element to watch its test run.
-            </p>
-          </div>
-          <div className="feature animate-on-scroll">
-            <div className="feature-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#fbbf24"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-              </svg>
-            </div>
-            <h3>Flakiness Tracking</h3>
-            <p>
-              Playwright reporter stores every run locally. Track pass rates, spot flaky tests, browse artifacts — no
-              external service, no per-seat pricing.
+              See coverage and test videos directly in your app. Green for covered, red for gaps. Click any element to
+              watch its test run.
             </p>
           </div>
           <div className="feature animate-on-scroll">

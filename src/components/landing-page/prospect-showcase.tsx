@@ -10,7 +10,7 @@ export function ProspectShowcase() {
           </h2>
           <p>
             Map every route's interactive elements to tests. Mark gaps with <code>null</code>. The overlay shows it all
-            visually — coverage, flakiness, and test videos — right in your running app.
+            visually — coverage and test videos — right in your running app.
           </p>
         </div>
         <div className="showcase-code animate-on-scroll">
