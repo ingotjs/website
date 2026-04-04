@@ -679,44 +679,55 @@ nav {
 }
 
 /* ── DX section ── */
+.dx-section {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 1.5rem;
+}
+
+.dx-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
 .dx-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .dx-card {
-  padding: 1.5rem;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--bg);
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .dx-cmd {
   font-family: "SF Mono", "Fira Code", "Fira Mono", monospace;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.625rem;
 }
 
 .dx-prompt {
   color: var(--text-dim);
   margin-right: 0.5rem;
+  font-weight: 400;
 }
 
 .dx-card p {
   font-size: 0.8125rem;
   color: var(--text-muted);
-  line-height: 1.7;
+  line-height: 1.65;
   margin: 0;
 }
 
 .dx-card code {
   font-size: 0.8125rem;
-  padding: 0.15em 0.4em;
+  padding: 0.1em 0.35em;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--text);
 }
 

@@ -1,7 +1,7 @@
 export function CastDx() {
   return (
-    <section className="features">
-      <div className="features-inner">
+    <section className="dx-section">
+      <div className="dx-inner">
         <div className="section-header">
           <h2>Developer Experience</h2>
           <p>Smart scripts that handle the boring parts. You write features, the tooling handles the rest.</p>
