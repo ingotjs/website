@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { pkgConfig, pmCommands } from "../../lib/pkg-config";
 import type { PkgName, PmName } from "../../lib/pkg-config";
+import { CastDx } from "./cast-dx";
 import { CastFeatures } from "./cast-features";
 import { CastHero } from "./cast-hero";
 import { CastMore } from "./cast-more";
@@ -199,6 +200,7 @@ export function LandingPage() {
           <CastHero />
           <CastTrustBar />
           <CastFeatures />
+          <CastDx />
           <CastMore />
           <CastShowcase />
           <CastQuickstart />

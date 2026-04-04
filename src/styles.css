@@ -678,6 +678,47 @@ nav {
   text-decoration-color: var(--text);
 }
 
+/* ── DX section ── */
+.dx-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.5rem;
+}
+
+.dx-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+}
+
+.dx-cmd {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", monospace;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.dx-prompt {
+  color: var(--text-dim);
+  margin-right: 0.5rem;
+}
+
+.dx-card p {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.dx-card code {
+  font-size: 0.8125rem;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  background: var(--bg-subtle);
+}
+
 /* ── And more section ── */
 .more {
   position: relative;
