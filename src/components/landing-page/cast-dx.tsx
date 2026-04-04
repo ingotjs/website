@@ -17,7 +17,7 @@ export function CastDx() {
             <div className="dx-cmd">
               <span className="dx-prompt">$</span> bun ok
             </div>
-            <p>Type checks, lints, formats, and runs unit tests. The AI agent runs it as needed to validate its changes.</p>
+            <p>Type checks, lints, formats, and runs unit tests. Your AI agent runs it as needed to validate its changes.</p>
           </div>
           <div className="dx-card animate-on-scroll">
             <div className="dx-cmd">
