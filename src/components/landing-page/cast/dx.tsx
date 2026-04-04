@@ -30,8 +30,8 @@ export function CastDx() {
               <code>bun ok:full</code>
             </div>
             <p className="text-[0.8125rem] text-text-muted leading-[1.65] m-0">
-              Everything in <code>bun ok</code> plus E2E tests and dead code detection. Runs as pre-commit hook and in CI
-              before deploying.
+              Everything in <code>bun ok</code> plus E2E tests and dead code detection. Runs as pre-commit hook and in
+              CI before deploying.
             </p>
           </div>
         </div>

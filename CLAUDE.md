@@ -16,17 +16,18 @@ Marketing site for the [ingot](https://github.com/ingotjs) brand. Static Vite + 
 
 ### Commands
 
-| Command       | Description                         |
-| :------------ | :---------------------------------- |
-| `bun dev`     | Start dev server (via `vp dev`)     |
-| `bun build`   | Production build (via `vp build`)   |
-| `bun preview` | Preview production build            |
-| `bun ts`      | Type check (`tsgo --noEmit`)        |
-| `bun clean`   | Remove `dist` and `.tanstack` dirs  |
+| Command       | Description                                           |
+| :------------ | :---------------------------------------------------- |
+| `bun dev`     | Start dev server (via `vp dev`)                       |
+| `bun build`   | Production build (via `vp build`)                     |
+| `bun preview` | Preview production build                              |
+| `bun ok`      | Format + lint + type check — **run after every task** |
+| `bun clean`   | Remove `dist` and `.tanstack` dirs                    |
 
 ### Quality Verification
 
-- **Run `bun build` and `bun ts` to verify changes** — a task is NOT complete until the build succeeds and types check
+- **ALWAYS run `bun ok` after finishing any task** — a task is NOT complete until it passes
+- Pre-commit hook runs `vp staged` (format + lint staged files)
 
 ---
 
@@ -68,6 +69,7 @@ src/
 ### Deployment
 
 GitHub Pages via `.github/workflows/deploy.yml`. On push to `main`:
+
 1. `bun install --frozen-lockfile`
 2. `bun run build`
 3. Push `dist/` to `ingotjs/ingotjs.github.io` (main branch) via `peaceiris/actions-gh-pages@v4`
@@ -76,11 +78,13 @@ GitHub Pages via `.github/workflows/deploy.yml`. On push to `main`:
 
 ### Linting & Formatting
 
-[Vite+](https://vite.dev/plus/) (`vite-plus`) for Oxlint + Oxfmt. Config: `vite.config.ts` imports from `vite-plus`.
+[Vite+](https://vite.dev/plus/) (`vite-plus`) for Oxlint + Oxfmt + [Ultracite](https://ultracite.dev/). Config: `vite.config.ts` imports from `vite-plus`. Pre-commit hooks via `vp staged` (`.vite-hooks/pre-commit`).
 
 - **Format**: `vp fmt --write`
 - **Lint**: `vp lint --fix`
+- **Both**: `bun ok` (format + lint + type check)
 - **Do NOT install Oxlint, Oxfmt, or tsdown directly** — Vite+ bundles them
+- **NEVER run `tsc`, `vp fmt`, or `vp lint` directly** — always use `bun ok`
 
 ---
 
@@ -168,23 +172,23 @@ GitHub Pages via `.github/workflows/deploy.yml`. On push to `main`:
 
 ## Key Files
 
-| File                                         | Purpose                                            |
-| :------------------------------------------- | :------------------------------------------------- |
-| `vite.config.ts`                             | Vite config (Tailwind, TanStack Router, React)     |
-| `index.html`                                 | HTML shell (fonts, meta, favicon)                  |
-| `src/main.tsx`                               | App entry — router creation, React root render     |
-| `src/styles.css`                             | Tailwind imports, @theme, custom CSS               |
-| `src/routes/__root.tsx`                      | Root layout                                        |
-| `src/routes/index.tsx`                       | Homepage route                                     |
-| `src/components/landing-page/landing-page.tsx` | Main landing page component                       |
-| `src/components/landing-page/constants.ts`   | Landing page constants                             |
-| `src/components/copy-button.tsx`             | Copy-to-clipboard button                           |
-| `src/components/pm-switcher.tsx`             | Package manager tab switcher                       |
-| `src/lib/pkg-config.ts`                      | Package URLs, PM commands, types                   |
-| `public/`                                    | Static assets (icons, logos, images)               |
-| `.github/workflows/deploy.yml`               | GitHub Pages deploy pipeline                       |
-| `tsconfig.json`                              | TypeScript config (path alias `@/*`)               |
-| `package.json`                               | Scripts, dependencies                              |
+| File                                           | Purpose                                        |
+| :--------------------------------------------- | :--------------------------------------------- |
+| `vite.config.ts`                               | Vite config (Tailwind, TanStack Router, React) |
+| `index.html`                                   | HTML shell (fonts, meta, favicon)              |
+| `src/main.tsx`                                 | App entry — router creation, React root render |
+| `src/styles.css`                               | Tailwind imports, @theme, custom CSS           |
+| `src/routes/__root.tsx`                        | Root layout                                    |
+| `src/routes/index.tsx`                         | Homepage route                                 |
+| `src/components/landing-page/landing-page.tsx` | Main landing page component                    |
+| `src/components/landing-page/constants.ts`     | Landing page constants                         |
+| `src/components/copy-button.tsx`               | Copy-to-clipboard button                       |
+| `src/components/pm-switcher.tsx`               | Package manager tab switcher                   |
+| `src/lib/pkg-config.ts`                        | Package URLs, PM commands, types               |
+| `public/`                                      | Static assets (icons, logos, images)           |
+| `.github/workflows/deploy.yml`                 | GitHub Pages deploy pipeline                   |
+| `tsconfig.json`                                | TypeScript config (path alias `@/*`)           |
+| `package.json`                                 | Scripts, dependencies                          |
 
 ---
 

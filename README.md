@@ -1,6 +1,5 @@
 https://ingot.js.org
 
-and also 
+and also
 
 https://ingotjs.github.io
-

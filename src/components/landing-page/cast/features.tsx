@@ -73,8 +73,8 @@ export function CastFeatures() {
             </div>
             <h3 className="text-base font-bold mb-2 tracking-tight">Edge-Native</h3>
             <p className="text-sm text-text-muted leading-[1.7]">
-              Cloudflare Workers + D1 + KV. Zero config — your app runs on the same global edge network as your database.
-              Sub-10ms reads, zero egress fees, global replication.
+              Cloudflare Workers + D1 + KV. Zero config — your app runs on the same global edge network as your
+              database. Sub-10ms reads, zero egress fees, global replication.
             </p>
           </div>
           <div className="p-6 animate-on-scroll">
@@ -106,8 +106,8 @@ export function CastFeatures() {
               >
                 Lingui
               </a>{" "}
-              — UI, auth errors, emails, and meta tags. Your AI agent handles extraction and catalogs. Adding a
-              language is a PO file, not a refactor.
+              — UI, auth errors, emails, and meta tags. Your AI agent handles extraction and catalogs. Adding a language
+              is a PO file, not a refactor.
             </p>
           </div>
           <div className="p-6 animate-on-scroll">

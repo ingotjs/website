@@ -12,15 +12,17 @@
     "dev": "vp dev",
     "build": "vp build",
     "preview": "vp preview",
-    "ts": "tsgo --noEmit",
-    "clean": "rm -rf dist .tanstack"
+    "ok": "vp fmt --write && vp lint --fix && tsc --noEmit",
+    "ok:ci": "vp fmt --check && vp lint && tsc --noEmit",
+    "clean": "rm -rf dist .tanstack",
+    "prepare": "vp config"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.2",
+    "@tailwindcss/vite": "4.2.2",
     "@tanstack/react-router": "1.168.8",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "4.2.2"
   },
   "devDependencies": {
     "@tanstack/router-plugin": "1.167.10",
@@ -28,6 +30,7 @@
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.1",
     "typescript": "6.0.2",
+    "ultracite": "7.4.0",
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
     "vite-plus": "0.1.14"
   }

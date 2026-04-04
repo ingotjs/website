@@ -19,11 +19,14 @@ export function ProspectHero({ activePm, onPmSwitch, pmBin, pmArgs, pmFullCmd }:
         companion.
       </h1>
       <p className="text-[clamp(0.9375rem,1.5vw,1.0625rem)] text-text-muted max-w-[520px] leading-[1.7] mb-10">
-        Coverage mapping, test artifacts, and a dev overlay — all in one package. Your AI agent
-        scans every route, applies <code>data-testid</code>, and builds the coverage file. You see everything in an
-        overlay without leaving your app.
+        Coverage mapping, test artifacts, and a dev overlay — all in one package. Your AI agent scans every route,
+        applies <code>data-testid</code>, and builds the coverage file. You see everything in an overlay without leaving
+        your app.
       </p>
-      <div className="inline-flex flex-col p-0 gap-0 min-w-[34ch] text-left bg-bg-card border border-border rounded-[10px] font-mono text-[0.9375rem] mb-8 transition-[border-color] duration-200 hover:border-border-hover" data-pm-group="prospect-hero">
+      <div
+        className="inline-flex flex-col p-0 gap-0 min-w-[34ch] text-left bg-bg-card border border-border rounded-[10px] font-mono text-[0.9375rem] mb-8 transition-[border-color] duration-200 hover:border-border-hover"
+        data-pm-group="prospect-hero"
+      >
         <PmTabs active={activePm} onSwitch={onPmSwitch} />
         <div className="flex items-center gap-3 px-5 py-3">
           <span className="text-text-dim select-none">$</span>
@@ -45,7 +48,12 @@ export function ProspectHero({ activePm, onPmSwitch, pmBin, pmArgs, pmFullCmd }:
           </svg>
           GitHub
         </a>
-        <a href="https://www.npmjs.com/package/@ingot/prospect" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-sm font-medium text-text-muted transition-colors duration-150 py-2.5 hover:text-text [&_svg]:w-[18px] [&_svg]:h-[18px] [&_svg]:fill-current">
+        <a
+          href="https://www.npmjs.com/package/@ingot/prospect"
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center gap-2 text-sm font-medium text-text-muted transition-colors duration-150 py-2.5 hover:text-text [&_svg]:w-[18px] [&_svg]:h-[18px] [&_svg]:fill-current"
+        >
           <svg viewBox="0 0 16 16" aria-hidden="true">
             <path d="M0 0v16h16V0H0zm13 13H8V5H5v8H3V3h10v10z" fill="currentColor" />
           </svg>

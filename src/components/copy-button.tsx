@@ -12,7 +12,11 @@ export function CopyButton({ text }: { text: string }) {
   }, [text]);
 
   return (
-    <button className={`copy-btn relative inline-flex items-center justify-center p-1.5 rounded-md border-none bg-transparent text-text-dim cursor-pointer transition-colors duration-150 hover:text-text [&_svg]:w-3.5 [&_svg]:h-3.5${copied ? " copied" : ""}`} onClick={handleCopy} aria-label="Copy command">
+    <button
+      className={`copy-btn relative inline-flex items-center justify-center p-1.5 rounded-md border-none bg-transparent text-text-dim cursor-pointer transition-colors duration-150 hover:text-text [&_svg]:w-3.5 [&_svg]:h-3.5${copied ? " copied" : ""}`}
+      onClick={handleCopy}
+      aria-label="Copy command"
+    >
       <svg
         viewBox="0 0 24 24"
         fill="none"

@@ -23,7 +23,12 @@ export function PmTabs({ active, onSwitch }: { active: PmName; onSwitch: (pm: Pm
   );
 
   return (
-    <div className="flex justify-start border-b border-border w-full" role="tablist" aria-label="Package manager" onKeyDown={handleKeyDown}>
+    <div
+      className="flex justify-start border-b border-border w-full"
+      role="tablist"
+      aria-label="Package manager"
+      onKeyDown={handleKeyDown}
+    >
       {pmNames.map((pm) => (
         <button
           key={pm}

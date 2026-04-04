@@ -96,7 +96,10 @@ export function LandingPage() {
 
   return (
     <>
-      <a href="#main" className="absolute -top-full left-4 z-[200] px-5 py-3 bg-accent text-bg font-bold text-sm rounded-b-lg transition-[top] duration-150 focus:top-0">
+      <a
+        href="#main"
+        className="absolute -top-full left-4 z-[200] px-5 py-3 bg-accent text-bg font-bold text-sm rounded-b-lg transition-[top] duration-150 focus:top-0"
+      >
         Skip to content
       </a>
 
@@ -143,7 +146,12 @@ export function LandingPage() {
 
       {/* Package tab bar */}
       <div className="tab-bar fixed top-16 left-0 right-0 z-99 bg-bg-subtle border-b border-border">
-        <div className="max-w-[1120px] mx-auto px-6 flex items-end gap-1.5 pt-2.5" role="tablist" aria-label="Package" onKeyDown={handleTabKeyDown}>
+        <div
+          className="max-w-[1120px] mx-auto px-6 flex items-end gap-1.5 pt-2.5"
+          role="tablist"
+          aria-label="Package"
+          onKeyDown={handleTabKeyDown}
+        >
           <button
             role="tab"
             className="tab-btn tab-btn--cast appearance-none font-sans text-left cursor-pointer relative px-6 py-4 rounded-t-[10px] border border-transparent border-b-0 bg-transparent text-text-dim transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] min-w-[220px] hover:text-text-muted hover:bg-white/3 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-[-2px]"
@@ -157,9 +165,13 @@ export function LandingPage() {
           >
             <div className="flex items-center gap-2.5 mb-1">
               <span className="tab-btn-name text-[0.9375rem] font-bold font-mono tracking-tight">@ingot/cast</span>
-              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[0.5625rem] font-bold uppercase tracking-wide bg-[rgba(239,68,68,0.12)] text-cast-light border border-[rgba(239,68,68,0.2)]">New</span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[0.5625rem] font-bold uppercase tracking-wide bg-[rgba(239,68,68,0.12)] text-cast-light border border-[rgba(239,68,68,0.2)]">
+                New
+              </span>
             </div>
-            <p className="tab-btn-desc text-[0.8125rem] leading-[1.4]">Full-stack TypeScript starter with AI-first DX</p>
+            <p className="tab-btn-desc text-[0.8125rem] leading-[1.4]">
+              Full-stack TypeScript starter with AI-first DX
+            </p>
           </button>
           <button
             role="tab"
@@ -174,7 +186,9 @@ export function LandingPage() {
           >
             <div className="flex items-center gap-2.5 mb-1">
               <span className="tab-btn-name text-[0.9375rem] font-bold font-mono tracking-tight">@ingot/prospect</span>
-              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[0.5625rem] font-bold uppercase tracking-wide bg-[rgba(34,197,94,0.12)] text-prospect-light border border-[rgba(34,197,94,0.2)]">WIP</span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[0.5625rem] font-bold uppercase tracking-wide bg-[rgba(34,197,94,0.12)] text-prospect-light border border-[rgba(34,197,94,0.2)]">
+                WIP
+              </span>
             </div>
             <p className="tab-btn-desc text-[0.8125rem] leading-[1.4]">E2E coverage framework for route-based apps</p>
           </button>
@@ -195,7 +209,13 @@ export function LandingPage() {
           <div className="hero-bg-overlay absolute top-[110px] left-0 right-0 h-[900px] z-0 pointer-events-none overflow-hidden">
             <img src="bg-prospect.webp" alt="" className="w-full h-full object-cover object-top opacity-12" />
           </div>
-          <ProspectPage activePm={activePm} onPmSwitch={setActivePm} pmBin={pm.bin} pmArgs={pm.args} pmFullCmd={pmFullCmd} />
+          <ProspectPage
+            activePm={activePm}
+            onPmSwitch={setActivePm}
+            pmBin={pm.bin}
+            pmArgs={pm.args}
+            pmFullCmd={pmFullCmd}
+          />
         </div>
       </main>
 
@@ -204,7 +224,12 @@ export function LandingPage() {
         <div className="max-w-[1120px] mx-auto flex flex-col items-center gap-6">
           <p className="text-[0.8125rem] text-text-dim">
             made with <span className="text-cast">&#9829;</span> by{" "}
-            <a href="https://github.com/ftzi" target="_blank" rel="noopener" className="text-text-muted underline underline-offset-2">
+            <a
+              href="https://github.com/ftzi"
+              target="_blank"
+              rel="noopener"
+              className="text-text-muted underline underline-offset-2"
+            >
               ftzi
             </a>
           </p>
